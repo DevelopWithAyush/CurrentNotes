@@ -1,0 +1,50 @@
+.signupbox{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 5rem;
+}
+.signup{
+    position: relative;
+    width: 40%;
+    height: 80%;
+    background-color: #bf00ff;
+    border-radius: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.signup .heading{
+    font-size: 3rem;
+    color: white;
+}
+.signup input{
+    width: 60%;
+    padding:1rem 3rem;
+    border-radius: 1rem;
+    text-transform: none;
+}
+
+.signup .btn{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+ .btn .signupbtn{
+    width: auto;
+    height: auto;
+    padding: 1rem 3rem;
+    border: .2rem solid white;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: white;
+    border-radius: 1rem;
+    cursor: pointer;
+ }
+ 

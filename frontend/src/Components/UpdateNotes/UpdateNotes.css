@@ -1,0 +1,59 @@
+.wapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(138, 131, 131, 0.552);
+}
+.updatenotes{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 70rem;
+    height: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #bf00ff;
+    border-radius: 2rem;
+    transition: 2s;
+    transition-delay: 5s;
+    padding: 3rem 0rem;
+}
+.updateheading{
+    font-size: 2.5rem;
+    color: white;
+}
+.updateinput{
+    width: 60%;
+    padding: 1rem 3rem;
+    border-radius: 2rem;
+    text-transform: none;
+}
+.updatenotes .btn{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.updatenotes .btn>button{
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background-color: white;
+    color: #bf00ff;
+    font-weight: 600;
+
+}
+.closebtn{
+    width: auto;
+    height: auto;
+    padding: 1rem 2rem;
+    background-color: #bf00ff;
+    border: .2rem solid white;
+    color: white;
+    border-radius: 1rem;
+}

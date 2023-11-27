@@ -1,0 +1,25 @@
+.addnotes{
+    width: 60%;display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;padding: 4rem 0rem;
+    
+
+}
+.addnotes input{
+    width: 60%;
+    border: .2rem solid #bf00ff;
+    padding:1rem 1.5rem;
+    border-radius: 2rem;
+    text-transform: none;
+}
+.addnotes .btn{
+    width: auto;
+    height: auto;
+    padding:1rem 2rem ;
+    color: white;
+border-radius: 1rem;
+    background-color: #bf00ff;
+    cursor: pointer;
+
+}

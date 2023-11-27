@@ -1,0 +1,53 @@
+.header{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 7%;
+    background-color: #bf00ff;
+    border-top-left-radius:2rem ;
+    border-top-right-radius:2rem ;
+    /* position: absolute; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    
+}
+.logo{
+    font-size: 3rem;
+    font-weight: 600;
+    color: white;
+}
+.navbar{
+    font-size: 1.5rem;
+}
+.navbar .navbar-btn{
+    color: white;
+    margin: 2rem;
+    width: auto;
+    height: auto;
+    padding: 1rem 3rem;
+    border: .2rem solid white;
+    border-radius: 1rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 600;
+}
+.enteruser{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.enteruser .username{
+    color: white;
+    margin-right: 2rem;
+    font-size: 2rem;
+}
+.enteruser .logoutbtn{
+    width: auto;
+    height: auto;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+}
