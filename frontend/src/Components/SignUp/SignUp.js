@@ -2,7 +2,8 @@ import React,{useState} from 'react'
 import "./SignUp.css"
 import { useNavigate,Link } from 'react-router-dom'
 
-function SignUp() {
+function SignUp(props) {
+  const {showalert} = props
     const navigate = useNavigate()
     const [credentials,setCredentials] = useState({name:"",email:"",phone:"",password:""})
     const handleSubmit = async(e)=>{
@@ -20,14 +21,17 @@ function SignUp() {
         if(json.success === true){
             localStorage.setItem("token",json.authToken)
             localStorage.setItem("name",json.user.name)
+            showalert("success","successfully signup")
          navigate('/')   
         }else{
-          console.log("nahi ho paya bhai ")
+          showalert("error",json.error)
+
         }
         
         
       } catch (error) {
-        
+        showalert("error","internal server error")
+
       }
   
     }

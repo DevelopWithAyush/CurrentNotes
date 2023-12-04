@@ -2,13 +2,15 @@ import React from 'react'
 import "./Navbar.css"
 import { Link ,useNavigate } from 'react-router-dom'
 
-function Navbar() {
+function Navbar(props) {
+  const {showalert} = props
   const navigate = useNavigate()
 
   const handlelogout =()=>{
     localStorage.removeItem('token')
     localStorage.removeItem('name')
     navigate('/login')
+    showalert("success","successfuly logout")
   }
 
   return (

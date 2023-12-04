@@ -37,3 +37,6 @@ html::-webkit-scrollbar-thumb {
   border-radius: .5rem;
 
 }
+button{
+  cursor: pointer;
+}

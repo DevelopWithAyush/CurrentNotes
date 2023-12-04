@@ -1,0 +1,30 @@
+.alertcont{
+    width: 100vw;
+    display: flex;
+    padding: 1rem 5%;
+    font-size: 2rem ;
+    position: absolute;
+    font-weight: bold;
+    color: white;
+    z-index: 100000;
+    top:8rem;
+    /* margin-top: 3rem; */
+
+}
+.error{
+background: rgb(255, 0, 0);
+
+animation: horizontal-shaking 0.5s infinite;
+
+}
+.success{
+background: green;
+
+}
+@keyframes horizontal-shaking {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(10px) }
+    50% { transform: translateX(-10px) }
+    75% { transform: translateX(10px) }
+    100% { transform: translateX(0) }
+  }

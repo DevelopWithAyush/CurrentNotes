@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import NoteContext from "../Context/noteContext"
 
 function NoteState(props) {
+  const {showalert} = props
 
   const host = `http://localhost:8000`
   const [notes,setNotes] = useState([])
 // getallnotes 
-console.log()
 
 const getNotes = async()=>{
     try {
@@ -20,8 +20,9 @@ const getNotes = async()=>{
         const json = await response.json()
         console.log(json)
         setNotes(json)
+
     } catch (error) {
-        
+      showalert("error","internal server problem")
     }
 }
 
@@ -41,15 +42,18 @@ const addNotes = async (newNote) => {
         // Assuming 'notes' is the current state variable for your notes array
         const updatedNotes = [...notes, { notes: newNote }];
         setNotes(updatedNotes);
+        showalert("success","Note added")
+
       } else {
         // Handle the error based on the response status or response.json() if needed
         console.error('Failed to add note:', response.status, response.statusText);
         // You might want to show a user-friendly error message or log the error accordingly
+        showalert("error","some error try next time")
+
+        
       }
     } catch (error) {
-      // Handle network or other unexpected errors
-      console.error('An unexpected error occurred:', error);
-      // You might want to show a user-friendly error message or log the error accordingly
+      showalert("error","internal server problem")
     }
   };
   
@@ -71,8 +75,11 @@ const deleteNotes = async (id) => {
     // Assuming 'notes' is the current state variable for your notes array
     const updatedNotes = notes.filter((note) => note._id !== id);
     setNotes(updatedNotes);
+    showalert("success","Note deleted")
+
 } catch (error) {
-        
+  showalert("errror","internal server error")
+
 }
   };
 
@@ -99,8 +106,12 @@ try{
       break;
     }
   }
+  showalert("success","note updated")
+
   setNotes(newNotes)
 }catch{
+  showalert("error","internal server problem")
+
 
 }
 
